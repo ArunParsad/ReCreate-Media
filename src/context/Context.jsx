@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from 'react'
-import { fetchFromAPI } from '../utils/fetchFromApi'
+import { fetchDataFromAPI } from '../utils/fetchFromApi'
 
 const context = createContext()
 
@@ -33,7 +33,7 @@ const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     if (categorie) {
-      fetchFromAPI(`search?part=snippet&q=${categorie}`).then((data) =>
+      fetchDataFromAPI(`search?part=snippet&q=${categorie}`).then((data) =>
         dispatch({ type: 'SUGGESTED_VIDEOS', payload: data.items })
       )
     }
