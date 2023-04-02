@@ -4,7 +4,7 @@ import Tag from './Tag'
 const Categories = () => {
   return (
     <>
-      <div className='md:mx-20 mx-10 space-x-2 space-y-2 md:space-y-0 overflow-x-auto'>
+      <div className='flex flex-row justify-center items-center w-full md:max-w-[90vw] space-x-3 overflow-x-auto  mx-auto scrollbar-none'>
         {categories.map((categorie) => {
           const { id } = categorie
           return <Tag {...categorie} key={id} />

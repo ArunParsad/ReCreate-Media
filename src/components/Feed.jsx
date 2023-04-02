@@ -17,7 +17,7 @@ const Feed = () => {
     )
   return (
     <>
-      <section className='max-w-[95vw] md:max-w-[90vw] justify-left space-x-4  h-full flex flex-row md:mx-20 mx-5 flex-wrap mt-5'>
+      <section className='grid grid-cols-1 max-w-full md:grid-cols-3 lg:grid-cols-4 mx-auto md:max-w-[95vw] mt-5 place-items-center'>
         {videos.map((video, index) => {
           return <VideoCard video={video} key={index} />
         })}
